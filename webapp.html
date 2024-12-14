@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation Generator</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #00509e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <h1>Motivation Generator</h1>
+    <p id="quote">Click the button to get motivated!</p>
+    <button onclick="generateQuote()">New Quote</button>
+
+    <script>
+        const quotes = [
+            "Believe in yourself!",
+            "The harder you work, the luckier you get.",
+            "Success is no accident.",
+            "You are capable of amazing things!",
+            "Dream it. Wish it. Do it."
+        ];
+
+        function generateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
